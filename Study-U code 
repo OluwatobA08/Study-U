@@ -1,0 +1,38 @@
+import random
+
+def generate_math_test():
+    questions = [
+        {"question": "What is the value of 5 * 7?", "options": ["25", "35", "45", "55"], "answer": "35"},
+        {"question": "Simplify: 3 + 2 * 4", "options": ["11", "15", "20", "25"], "answer": "11"},
+        {"question": "Find the perimeter of a rectangle with length 8 and width 6.", "options": ["14", "20", "24", "48"], "answer": "28"},
+        {"question": "Calculate 1/4 of 80.", "options": ["10", "15", "20", "25"], "answer": "20"},
+        {"question": "What is the square root of 49?", "options": ["5", "6", "7", "8"], "answer": "7"},
+        {"question": "If x = 12, what is the value of 2x?", "options": ["20", "24", "26", "30"], "answer": "24"},
+        {"question": "Divide 63 by 9.", "options": ["6", "7", "8", "9"], "answer": "7"},
+        {"question": "What is the area of a square with side length 5?", "options": ["20", "25", "30", "35"], "answer": "25"},
+        {"question": "Subtract 15 from 42.", "options": ["23", "27", "32", "37"], "answer": "27"},
+        {"question": "If a triangle has angles of 90°, 45°, and x°, what is the value of x?", "options": ["30", "45", "60", "75"], "answer": "45"},
+    ]
+
+    random.shuffle(questions)
+
+    print("Welcome to the 7th-grade math test!\n")
+
+    score = 0
+    for i, question in enumerate(questions, 1):
+        print(f"Question {i}: {question['question']}")
+        for j, option in enumerate(question['options'], 1):
+            print(f"{j}. {option}")
+
+        user_answer = input("Your answer (enter the number): ")
+        if user_answer == str(question['options'].index(question['answer']) + 1):
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Wrong! The correct answer is {question['answer']}\n")
+
+    print(f"Test completed! Your score: {score}/{len(questions)}")
+
+# Run the test
+generate_math_test()
+
