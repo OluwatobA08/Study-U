@@ -1,6 +1,3 @@
-Certainly! Here's a simple Python code for a 10-question 7th-grade math test without external dependencies:
-
-```python
 import random
 
 def generate_math_test():
@@ -36,6 +33,3 @@ def generate_math_test():
 
 # Run the test
 generate_math_test()
-```
-
-This code generates a 10-question math test with basic arithmetic questions. Users input their answers, and the code provides feedback on correctness at the end of the test.
